@@ -15,13 +15,15 @@ import { AlertComponent } from './directives/alert.component';
 import { AuthGuard } from './guards/auth.guard';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { UsersComponent } from './users/users.component'
+import { MenuComponent } from './menu/menu.component';
 //angular material
 import {MatTableModule} from '@angular/material/table'
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatOptionModule, MatSelectModule, MatInputModule, MatPaginatorModule, MatSortModule } from '@angular/material'
+import { MatOptionModule, MatSelectModule, MatInputModule, MatPaginatorModule, MatSortModule, MatSidenavModule, MatIconModule} from '@angular/material'
 import { MatButtonModule } from '@angular/material/button'
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     LoginComponent,
     HomeComponent,
     AlertComponent,
+    MenuComponent,
+    UsersComponent,
 
 
   ],
@@ -49,7 +53,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     MatProgressSpinnerModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSidenavModule,
+    MatIconModule
+    
   ],
   providers: [
     AuthGuard,
