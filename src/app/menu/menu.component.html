@@ -1,11 +1,11 @@
 <mat-sidenav-container fullscreen> 
         <mat-sidenav #sidenav [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'" class="menu">
           <div class="sidenav-header">
-                <a [routerLink]="['/']"><mat-icon>home</mat-icon><br />Home</a>
+                <a [routerLink]="['/main']"><mat-icon>home</mat-icon><br />Home</a>
                 <a [routerLink]="['/']"><mat-icon>games</mat-icon><br />Games</a>
                 <a [routerLink]="['/']"><mat-icon> table_chart</mat-icon><br />Tables</a>
                 <a [routerLink]="['/']"><mat-icon>account_circle</mat-icon><br />Account</a>
-                <a [routerLink]="['/']"><mat-icon>settings</mat-icon><br />Settings</a>
+                <a [routerLink]="['/main', {outlets: {'main': ['settings']}}]"><mat-icon>settings</mat-icon><br />Settings</a>
           </div>
           <div class="sidenav-footer">
               <div class="logout">
@@ -19,7 +19,7 @@
             <mat-icon>menu</mat-icon>
           </button>
         </div>
-      
-        <app-users></app-users>
-      
+        <!-- Main Body -->
+          <router-outlet  name="main"></router-outlet>  
+
       </mat-sidenav-container>

@@ -5,6 +5,17 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // used to create fake backend
 import { fakeBackendProvider } from './helpers/fake-backend';
 
+//angular material
+import {MatTableModule} from '@angular/material/table'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule, MatSelectModule, 
+  MatInputModule, MatPaginatorModule, 
+  MatSortModule, MatSidenavModule, 
+  MatIconModule} from '@angular/material'
+import { MatButtonModule } from '@angular/material/button'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+//all other Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -17,14 +28,7 @@ import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsersComponent } from './users/users.component'
 import { MenuComponent } from './menu/menu.component';
-//angular material
-import {MatTableModule} from '@angular/material/table'
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatOptionModule, MatSelectModule, MatInputModule, MatPaginatorModule, MatSortModule, MatSidenavModule, MatIconModule} from '@angular/material'
-import { MatButtonModule } from '@angular/material/button'
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
-
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AlertComponent,
     MenuComponent,
     UsersComponent,
+    SettingsComponent,
+    
 
 
   ],
