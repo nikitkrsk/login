@@ -1,17 +1,19 @@
 table {
     width: 100%;
   }
-  
+  .filter{
+    margin: 0 15px;
+  }
   .mat-form-field {
     font-size: 14px;
    
   }
   
   td, th {
-    width: 25%;
+    width: 30%;
+    margin: 0 10px;
   }
   header{
     display: grid;
     justify-items: center;
   }
-  

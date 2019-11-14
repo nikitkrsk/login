@@ -4,8 +4,8 @@
     <h3>All registered users:</h3>
 </header>
 
-<mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" class="filter">
+<mat-form-field class="filter">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" >
   </mat-form-field>
   
   <div class="mat-elevation-z8">
