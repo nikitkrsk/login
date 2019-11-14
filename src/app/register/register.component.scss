@@ -1,0 +1,22 @@
+.loginFormMain{
+    display: grid;
+    justify-items: center;
+}
+.loginForm{
+    display: grid;
+    justify-items: center;
+   
+}
+.submitLogin{
+    display: grid;
+    grid-gap: 20px 0;
+    justify-items: center;
+    padding: 5px 0 5px 0;
+}
+.loginButton{
+    display: flex;
+}
+.dartImg{
+    padding: 25px 0 40px 0;
+    width: 200px;
+}
