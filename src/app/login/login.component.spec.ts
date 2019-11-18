@@ -1,25 +1,33 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+import { TestBed, async } from '@angular/core/testing';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthenticationService } from '../_services/authentication.service';
+import { HttpClient, HttpHandler} from '@angular/common/http';
+import { AlertService } from '../_services/alert.service';
 
+describe('LoginComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      imports: [MatFormFieldModule, MatProgressSpinnerModule, FormsModule, RouterTestingModule ],
+      declarations: [LoginComponent],
+      providers: [AuthenticationService, HttpClient, HttpHandler, AlertService]
+    }).compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it(`should have as title 'playDarts'`, () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const app = fixture.debugElement.componentInstance;
+    console.log(fixture.debugElement.componentInstance);
+    // expect(app.title).toEqual('playDarts');
   });
 });

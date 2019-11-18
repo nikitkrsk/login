@@ -14,7 +14,6 @@ export class AccountComponent implements OnInit {
 
   constructor(private userService: UserService) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log(this.currentUser);
     // this.model = this.currentUser;
   }
   // need to add api endpoint
