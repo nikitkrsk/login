@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { User } from '../_models/user';
-import { UserService } from '../_services/index';
+import { User } from '../../../_models/user';
+import { UserService } from '../../../_services/index';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -12,11 +12,12 @@ export interface UserData {
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class HomeComponent implements OnInit {
+
+export class UsersComponent implements OnInit {
   displayedColumns: string[] = ['username', 'firstName', 'lastName'];
   dataSource: MatTableDataSource<UserData>;
 
@@ -35,8 +36,9 @@ export class HomeComponent implements OnInit {
     this.getTable();
   }
   applyFilter(filterValue: string) {
+    this.dataSource.filterPredicate =
+      (data: User, filter: string) => data.username.indexOf(filter) !== -1;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }

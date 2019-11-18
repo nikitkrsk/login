@@ -1,0 +1,33 @@
+.menu{
+    background-color: #3F51B5;
+}
+.sidenav-header{
+    display: grid;
+    padding: 10px;
+    font-size: 0.8em;
+    & a{
+        padding: 10px 0;
+    }
+}
+.sidenav-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+   
+}
+.logout{
+    display: grid;
+    padding:15px;
+}
+a {
+    &:link, &:visited {
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+  
+    &:hover, &:active {
+      color: #F1EBEC
+    }
+  }

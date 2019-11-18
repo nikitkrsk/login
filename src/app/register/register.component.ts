@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AlertService, UserService } from '../services/index';
+import { AlertService, UserService } from '../_services/index';
 
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
-  moduleId: module.id,
+  styleUrls: ['./register.component.scss']
 })
 
 
